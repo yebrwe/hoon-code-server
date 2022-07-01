@@ -8,7 +8,8 @@ mkdir -p $START_DIR
 
 # function to clone the git repo or add a user's first file if no repo was specified.
 project_init () {
-    git clone https://github.com/Boritgoge/KiyomiTalk.git $START_DIR
+    git clone https://github.com/Boritgoge/KiyomiTalk.git $START_DIR/KiyomiTalk
+    cron
 }
 
 # add rclone config and start rclone, if supplied
