@@ -30,6 +30,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
+# Install cron
+RUN sudo apt-get install cron
+
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
 
