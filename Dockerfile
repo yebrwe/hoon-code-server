@@ -23,14 +23,18 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # -----------
 
 # Install a VS Code extension:
-# Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-# RUN code-server --install-extension esbenp.prettier-vscode
+
 # Korean Language Pack for Visual Studio Code
 RUN code-server --install-extension ms-ceintl.vscode-language-pack-ko
+# Python IntelliSence
+RUN code-server --install-extension ms-python.python
 
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo bash -
 RUN sudo apt-get install -y nodejs
+
+# Install Python
+RUN sudo apt-get install -y python
 
 # Install cron
 RUN sudo apt-get install -y cron
