@@ -43,7 +43,7 @@ RUN sudo apt-get install -y cron
 # RUN sudo apt-get install -y ubuntu-make
 
 # Copy files: 
-# COPY deploy-container/myTool /home/coder/myTool
+COPY deploy-container/testScripts /home/coder/testScripts
 
 # -----------
 
